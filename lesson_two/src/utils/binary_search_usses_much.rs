@@ -12,12 +12,12 @@ pub fn binary_search(arr: &[i32], target: i32) -> Option<(i32, usize)> {
         let mid: usize = (upper_bound + lower_bound) / 2; // Find the middle element of the array by adding lower bound and upper bound and divide by 2
         let mid_value: i32 = arr[mid];
 
+        println!("Iteration: {}", idx);
         match mid_value.cmp(&target) {
             Ordering::Equal => return Some((mid_value, mid)),
             Ordering::Less => lower_bound = mid + 1,
             Ordering::Greater => upper_bound = mid - 1,
         }
-        println!("Iteration: {}", idx);
     }
     None
 }
