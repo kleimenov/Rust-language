@@ -58,7 +58,7 @@ pub fn fnnd_max_destructuring_the_reference(numbers: [u32; 5]) -> u32 {
 }
 
 pub fn mutation_element(numbers: &mut [u32; 5]) -> &mut [u32; 5] {
-    for mut number in numbers.iter_mut() {
+    for number in numbers.iter_mut() {
         *number = *number + 1;
     }
     numbers
